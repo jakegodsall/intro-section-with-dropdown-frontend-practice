@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: inherit;
+    font-size: inherit;
+    box-sizing: inherit;
+    color: hsl(0, 0%, 41%);
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+}
