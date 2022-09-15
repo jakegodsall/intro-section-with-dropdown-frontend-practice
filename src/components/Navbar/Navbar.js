@@ -8,64 +8,64 @@ import IconPlanning from '../../assets/icon-planning.svg';
 import IconCalendar from '../../assets/icon-calendar.svg';
 import IconReminders from '../../assets/icon-reminders.svg';
 import IconTodo from '../../assets/icon-todo.svg';
+import NavItem from '../NavItem/NavItem';
+import Dropdown from '../Dropdown/Dropdown';
+import DropdownItem from '../DropdownItem/DropdownItem';
 
 const Navbar = () => {
-    const dropdownHandler = (event) => {
-        const dropdownClass = event.target.firstChild.textContent.toLowerCase();
-    };
-
-    return (
-        <div className='navbar__container'>
-            <img src={SnapLogo} alt='' />
-            <div className='navbar__list'>
-                <div className='navbar__item' onClick={dropdownHandler}>
-                    Features
-                    <img
-                        className='navbar__arrow'
-                        src={IconArrowDown}
-                        alt='Navigation Item'
-                    />
-                    <div className='navbar__dropdown features'>
-                        <div className='navbar__dropdown-item'>
-                            <img src={IconTodo} alt='' />
-                            Todo List
-                        </div>
-                        <div className='navbar__dropdown-item'>
-                            <img src={IconCalendar} alt='' />
-                            Calendar
-                        </div>
-                        <div className='navbar__dropdown-item'>
-                            <img src={IconReminders} alt='' />
-                            Reminders
-                        </div>
-                        <div className='navbar__dropdown-item'>
-                            <img src={IconPlanning} alt='' />
-                            Planning
-                        </div>
-                    </div>
-                </div>
-                <div className='navbar__item' onClick={dropdownHandler}>
-                    Company
-                    <img
-                        className='navbar__arrow'
-                        src={IconArrowDown}
-                        alt='Navigation Item'
-                    />
-                    <div className='navbar__dropdown company'>
-                        <div className='navbar__dropdown-item'>History</div>
-                        <div className='navbar__dropdown-item'>Our Team</div>
-                        <div className='navbar__dropdown-item'>Blog</div>
-                    </div>
-                </div>
-                <div className='navbar__item'>Careers</div>
-                <div className='navbar__item'>About</div>
-            </div>
-            <div className='navbar__account-section'>
-                <div className='navbar__login'>Login</div>
-                <div className='navbar__register'>Register</div>
-            </div>
-        </div>
-    );
+	return (
+		<div className='navbar__container'>
+			<img
+				src={SnapLogo}
+				alt=''
+			/>
+			<ul className='navbar__list'>
+				<NavItem
+					item='Features'
+					isDropdown={true}
+				>
+					<Dropdown>
+						<DropdownItem
+							image={IconTodo}
+							alt='to do'
+							text='Todo List'
+						/>
+						<DropdownItem
+							image={IconCalendar}
+							alt='calendar'
+							text='Calendar'
+						/>
+						<DropdownItem
+							image={IconReminders}
+							alt='reminders'
+							text='Reminders'
+						/>
+						<DropdownItem
+							image={IconPlanning}
+							alt='planning'
+							text='Planning'
+						/>
+					</Dropdown>
+				</NavItem>
+				<NavItem
+					item='Company'
+					isDropdown={true}
+				>
+					<Dropdown>
+						<DropdownItem text='History' />
+						<DropdownItem text='Our Team' />
+						<DropdownItem text='Blog' />
+					</Dropdown>
+				</NavItem>
+				<NavItem item='Careers' />
+				<NavItem item='About' />
+			</ul>
+			<div className='navbar__account-section'>
+				<div className='navbar__login'>Login</div>
+				<div className='navbar__register'>Register</div>
+			</div>
+		</div>
+	);
 };
 
 export default Navbar;

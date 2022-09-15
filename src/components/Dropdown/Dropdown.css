@@ -1,0 +1,10 @@
+.navbar__dropdown {
+	background-color: #fff;
+	padding: 1rem;
+	border-radius: 15px;
+	box-shadow: 0 3px 20px 2px hsl(0, 0%, 66%);
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 100px;
+}

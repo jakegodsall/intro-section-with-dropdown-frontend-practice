@@ -1,50 +1,23 @@
 .navbar__container {
-    display: grid;
-    grid-template-columns: 1fr 8fr 2fr;
-    align-items: center;
-    padding: 2rem;
+	display: grid;
+	grid-template-columns: 125px 1fr 250px;
+	align-items: center;
+	padding: 2rem;
+	position: relative;
 }
 
 .navbar__list {
-    display: flex;
-}
-
-.navbar__item {
-    margin-right: 2rem;
-}
-
-.navbar__item:hover {
-    color: hsl(0, 0%, 8%);
+	display: flex;
 }
 
 .navbar__account-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .navbar__register {
-    border: 1px solid black;
-    padding: 0.7rem 1rem;
-    border-radius: 10px;
-}
-
-.navbar__dropdown {
-    position: absolute;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 15px;
-    box-shadow: 0 3px 20px 2px hsl(0, 0%, 66%);
-    display: flex;
-    flex-direction: column;
-    display: none;
-}
-
-.navbar__dropdown-item {
-    margin-right: 10px;
-    padding: 10px 0;
-}
-
-.navbar__dropdown-item img {
-    padding-right: 15px;
+	border: 1px solid black;
+	padding: 0.7rem 1rem;
+	border-radius: 10px;
 }
